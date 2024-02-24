@@ -10,5 +10,9 @@
   },
   "devDependencies": {
     "vite": "^5.1.4"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.10",
+    "micromodal": "^0.4.10"
   }
 }

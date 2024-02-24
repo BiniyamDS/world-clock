@@ -1,13 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="micromodal.css">
+    <title>npmApp</title>
+</head>
+<body>
+    <div class="container">
+        <div id="timezone">Europe / London
+        </div>
+        <a href="#" id="mdlink" data-micromodal-trigger="modal-1">Change</a>
+        <div id="time">06:35:00</div>
+        <div id="date">Monday, 1 May, 2023</div>
+    </div>
+
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+        <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+            <header class="modal__header">
+              <h2 class="modal__title" id="modal-1-title">
+                Change Timezone
+              </h2>
+            </header>
+            <main class="modal__content" id="modal-1-content">
+                <select name="timeZLi" id="timeZLi" class="dropdown-menu">
+                  <option value="" selected disabled hidden>Pick a timezone</option>
+                </select>                
+                <button class="modal__btn modal__btn-primary" id="apply-bt" data-micromodal-close>Apply</button>
+            </main>
+          </div>
+        </div>
+      </div>   
+    <script type="module" src="main.js"></script>
+</body>
 </html>
